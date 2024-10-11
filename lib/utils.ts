@@ -2,6 +2,7 @@
 import { type ClassValue, clsx } from "clsx";
 // import qs from "query-string"; 
 import { twMerge } from "tailwind-merge";
+import { z } from "zod";
 // import { z } from "zod";
 
 export function cn(...inputs: ClassValue[]) {
@@ -69,7 +70,7 @@ export const formatDateTime = (dateString: Date) => {
 export function formatAmount(amount: number): string {
   const formatter = new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "USD",
+    currency: "INR",
     minimumFractionDigits: 2,
   });
 
